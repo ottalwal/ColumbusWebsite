@@ -1,3 +1,6 @@
+:root{
+    --black: black;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +10,7 @@
 }
 /********************************************/
 .navbar{
-    background: #131313;
+    background: #000000;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -31,6 +34,7 @@
     align-items: center;
     list-style: none;
 }
+.navbar_menu.active
 .navbar_item{
     height: 80px;
 }
@@ -63,8 +67,6 @@
     text-decoration: none;
     height: 100%;
     width: 125px;
-    border: none;
-    outline: none;
     color: red;
     background-image: linear-gradient(red, red);
     background-size: 0% 0.1em;
@@ -83,11 +85,29 @@
     width: 440.6px;
     height: 125.6px;
 }
-a:hover,
-a:focus,
-a:active {
-background-size: 100% 0.1em;
+a:hover, a:focus, a:active {
+    background-size: 100% 0.1em;
 }
+/********************************************/
+.heroimg {
+    z-index: 2;
+    box-shadow: inset 0 0 10px 10px #000;;
+}
+.footer {
+    bottom: 0;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15rem;
+    margin-top: 4rem;
+    border-top: 10rem rgb(240, 199, 199);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    justify-content: center;
+}
+
+
 
 @media screen and (max-width:1000px){
     /*Responsive styling for navbar*/
@@ -111,12 +131,12 @@ background-size: 100% 0.1em;
         z-index: -1;
     }
     .navbar_menu.active {
-        background: #131313;
+        background: #000000;
         top: 100%;
         opacity: 1;
         transition: all .3 ease;
         z-index: 99;
-        height: 60vh;
+        height: 68vh;
         font-size: 1.6rem;
     }
     .navbar_item{
@@ -128,7 +148,7 @@ background-size: 100% 0.1em;
         width: 100%;
         display: table;
     }
-    #mobile-menu{
+    #mobile_menu{
         position: absolute;
         top: 10%;
         right: 10%;
@@ -142,13 +162,13 @@ background-size: 100% 0.1em;
         cursor: pointer;
         background: #fff;
     }
-    #mobile-menu.is-active .bar:nth-child(1) {
+    #mobile_menu.is-active .bar:nth-child(1) {
         transform: translateY(9px) rotate(-45deg);
     }
-    #mobile-menu.is-active .bar:nth-child(3) {
-        transform: translateY(-9px) rotate(45deg);
+    #mobile_menu.is-active .bar:nth-child(3) {
+        transform: translateY(-16px) rotate(45deg);
     }
-    #mobile-menu.is-active .bar:nth-child(2) {
+    #mobile_menu.is-active .bar:nth-child(2) {
         opacity: 0;
     }
 }
