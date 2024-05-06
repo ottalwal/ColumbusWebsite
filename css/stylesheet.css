@@ -1,3 +1,7 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root{
     --brand-black:rgb(35, 32, 32);
     --brand-red: rgb(238, 52, 36);
@@ -7,12 +11,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Kumbh-Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    font-style: normal;
 }
 /********************************************/
-/* Scrollbar */
+
+/* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 0.6em;
 }
@@ -20,12 +25,14 @@
     background: black;
 }
 ::-webkit-scrollbar-thumb {
-    background: red;
+    background: var(--brand-red);
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(214, 48, 33);
 }
 /********************************************/
+
+/* Navbar styling */
 .navbar{
     background: #000000;
     height: 80px;
@@ -45,7 +52,9 @@
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px;
-    z-index: 1;
+    z-index: 3;
+    overflow-y: hidden;
+    font-weight: 500;
 }
 .navbar_menu{
     display: flex;
@@ -63,7 +72,7 @@
     width: 125px;
     text-decoration: none;
     height: 100%;
-    background-image: linear-gradient(red, red);
+    background-image: linear-gradient(rgb(238, 52, 36), rgb(238, 52, 36));
     background-size: 0% 0.1em;
     background-position-y: 100%;
     background-position-x: 50%;
@@ -84,9 +93,9 @@
     text-decoration: none;
     height: 100%;
     width: 125px;
-    color: red;
+    color: var(--brand-red);
     font-weight: 550;
-    background-image: linear-gradient(red, red);
+    background-image: linear-gradient(rgb(238, 52, 36), rgb(238, 52, 36));
     background-size: 0% 0.1em;
     background-position-y: 100%;
     background-position-x: 50%;
@@ -94,40 +103,91 @@
     transition: background-size 0.2s ease-in-out;
 }
 #navbar_logo {
-    background: url(../res/COC\ Logo_2C_PMS_REV.png);
-    background-image: url(../res/COC\ Logo_2C_PMS_REV.png) ;
+    background: url(../res/COC\ Logo.png);
+    background-image: url(../res/COC\ Logo.png) ;
     background-repeat: no-repeat;
     background-size: 244.7px 69.7px;
-    margin-top: 0.25rem;
+    margin-top: 1rem;
     margin-right: 0;
     width: 440.6px;
     height: 125.6px;
-    pointer-events: none;
+    overflow: hidden;
 }
 a:hover, a:focus, a:active {
     background-size: 100% 0.1em;
 }
 /********************************************/
+
+/* Slideshow Testing */
+
+
+
+
+/********************************************/
+/* Hero styling */
 .heroimg {
     z-index: 2;
-    box-shadow: inset 0 0 10px 10px #000;;
+    box-shadow: inset 0 100px 200px 50px #000;
     width: 100%;
-    height:100%
+    height: 89.7vh;
+    background-image: url(../res/cbus.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: center;
+    place-items: center;
 }
 .centered {
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
-    font-size:4rem;
-    color: var(--brand-black);
+    font-size: 4rem;
+    color: var(--white);
     transform: translate(-50%, -50%);
-  }
+    text-align: center;
+    overflow: hidden;
+    font-weight: 500;
+}
+button {
+    border-style: none;
+    box-shadow: inset 0 0 3px 1px #000;
+}
+.main_btn {
+    align-items: center;
+    width: 170px;
+    height: 60px;
+    position: relative;
+    padding: 12px 30px;
+    cursor: pointer;
+    background: var(--brand-red);
+    outline: none;
+    border-radius: 8px;
+    top: 17%;
+}
+.main_btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.main_btn a:hover {
+    font-weight: 700;
+}
+.main_btn:hover:after {
+    width: 100%;
+}
+
+/********************************************/
+
+/* Footer styling */
 .footer {
+    display: flex;
     position:relative;
     left: 0;
     bottom: 0;
-    height: 12rem;
+    height: 15rem;
     width: 100%;
+
     background-color: black;
     text-align: center;
     border-top: 3px solid red;
@@ -135,28 +195,34 @@ a:hover, a:focus, a:active {
 .footer p{
     color: white;
 }
+ .footer_container{
+    display: flex;
+    flex-direction: row;
+ }
 .table1 {
     display: column;
     justify-content: left;
     text-align: left;
     color:var(--white);
     margin-left: 2rem;
+    font-size: 1rem;
 }
 .table2 {
     display: column;
     justify-content: center;
     text-align: left;
     color:var(--white);
-    margin-left: 25rem;
-    margin-top:  -3.6rem;
+    margin-left: 10rem;
+    font-size: 16px;
 }
 .table3  {
     display: column;
     justify-content: center;
     text-align: left;
     color:var(--white);
-    margin-left: 40rem;
-    margin-top:  -6.5rem;
+    margin-left: 15rem;
+
+    font-size: 1rem;
 }
 .table3 a {
    color: lightcoral
@@ -174,6 +240,9 @@ th{
     cursor: pointer;
     text-decoration: underline;
 }
+/********************************************/
+
+
 @media screen and (max-width:1000px){
     /*Responsive styling for navbar*/
     .navbar_container {
@@ -218,6 +287,7 @@ th{
         top: 10%;
         right: 10%;
         transform: translate(5%, 20%);
+        z-index: 999;
     }
     .navbar_toggle .bar{
         width: 40px;
@@ -237,3 +307,34 @@ th{
         opacity: 0;
     }
 }
+    @media screen and (max-width:750px){
+        .footer {
+           padding-bottom: 10rem;
+           padding-top: 2rem;
+            border-top: 3px solid red;
+            font-size: 10px;
+            overflow-x: hidden;
+         }
+         .footer_container{
+            display: flex;
+            flex-direction: column;
+         }
+       .table1{
+        margin-left:7rem;
+       }
+       .table2{
+        margin-top:3rem;
+       }
+    }
+
+@media screen and (max-width:450px){
+    .footer {
+        
+       padding-bottom: 10rem;
+       padding-top: 2rem;
+        border-top: 3px solid red;
+        font-size: 10px;
+        overflow-x: hidden;
+     }
+
+    }
