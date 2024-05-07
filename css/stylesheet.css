@@ -246,8 +246,12 @@ a:hover, a:focus, a:active {
 	color: #24262b;
 	background-color: #ffffff;
 }
+.footer-col span {
+    text-decoration: underline;
+}
 .footer-copy {
     color: white;
+    
 }
 
 /*responsive*/
@@ -349,7 +353,7 @@ th{
     }
     .navbar_menu.active {
         background: #000000;
-        top: 10%;
+        top: 10vh;
         opacity: 1;
         transition: all .3 ease;
         z-index: 99;
