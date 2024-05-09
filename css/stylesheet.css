@@ -60,7 +60,7 @@
     margin: 0 auto;
     padding: 0 50px;
     z-index: 3;
-    overflow-y: hidden;
+    overflow-y: visible;
     font-weight: 500;
 }
 
@@ -72,6 +72,8 @@
 
 .navbar_item {
     height: 80px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .navbar_link {
@@ -80,6 +82,7 @@
     align-items: center;
     justify-content: center;
     width: 125px;
+    overflow-y: hidden;
     text-decoration: none;
     height: 100%;
     background-image: linear-gradient(rgb(238, 52, 36), rgb(238, 52, 36));
@@ -169,7 +172,6 @@ a:active {
 }
 
 .main_btn {
-    border-style: none;
     box-shadow: 2px 2px 10px -1px #000;
     align-items: center;
     width: 170px;
@@ -179,167 +181,210 @@ a:active {
     padding: 17px 45px;
     background: var(--brand-red);
     outline: none;
-    border-radius: 5px;
     top: 17%;
-    transition: 0.3s;
     text-decoration: none;
     color: #fff;
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    
+
+    padding: 15px 20px;
+    border: none;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #041f3d;
+    background: linear-gradient( 8deg, #0d5cb2 0%, #000000 74%);
+    text-align: center;
 }
 
 .main_btn:hover {
-    background-color: var(--brand-blue);
+    background: linear-gradient( 50deg, var(--brand-red) 0%, #0d0d23);;
 }
 
 /********************************************/
 
 /* Template Styling */
 .block-blue {
+    position: relative;
     width: 100%;
     height: 40rem;
     background-color: #003768;
+    overflow: hidden;
 }
 .block-white {
+    position: relative;
     width: 100%;
     height: 40rem;
     background-color: #fff;
-}
-/********************************************/
-
-/* Card Styling  */
-.rescard_conatiner{
-    padding-bottom: 30rem;  
-    max-width: 1170px;
-    margin: auto;
-}
-.container {
-    max-width: 1170px;
-    margin: auto;
+    overflow: hidden;
 }
 
-.row {
+.linee {
+    position: absolute;
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 2px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    margin-top: 13vh;
+}
+
+.linee span {
+    position: absolute;
+    margin-left: -8.5%;
+    font-size: 40px;
+    margin-top: -1.87vh;
+    color: var(--brand-blue);
+    letter-spacing: -0.3px;
+}
+
+.line-2 {
+    position: absolute;
+    border-bottom: 2px solid var(--white);
+}
+
+.line-2 span {
+    position: absolute;
+    margin-left: -40%;
+    font-size: 40px;
+    margin-top: -1.88vh;
+    color: var(--brand-red);
+}
+
+.innerblock {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 10%;
 }
+
+.activcard-1 {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 950px;
+    height: 450px;
+    padding: 0px 0px;
+    background-color: var(--brand-black);
+    justify-content: center;
+    margin-right: 3%;
+    z-index: 99;
+}
+
+.activcard-1 img {
+    width: 500px;
+    height: 400px;
+}
+
+.activcard-2 {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 950px;
+    height: 450px;
+    padding: 0px;
+    background-color: var(--brand-black);
+    justify-content: center;
+    margin-left: 3%;
+}
+
+.activcard-2 img {
+    width: 511px;
+    height: 558px;
+}
+
+.content span {
+    display: block;
+    color: var(--brand-blue);
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 500
+}
+
+.content-2 span {
+    color: var(--brand-red)
+}
+
+.content .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--brand-red);
+    margin-bottom: 20px;
+}
+
+.content-1 .title {
+    color: var(--brand-blue);
+}
+
+.content .text {
+    color: var(--brand-black);
+    font-size: 19px;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.content-2 .text {
+    color: var(--white);
+}
+
+.content button {
+    display: inline-flex;
+    padding: 15px 20px;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #041f3d;
+    background: linear-gradient( 8deg, #0d5cb2 0%, #000000 74%);
+}
+  
+.content button:hover {
+    background: linear-gradient( 50deg, var(--brand-red) 0%, #0d0d23);
+}
+  
+/*https://sagardevlopers.blogspot.com/2021/07/animated-slider-blog-card-using-html.html*/
+
+/********************************************/
+/* Card Styling */
+
 .rescard {
     width: 20rem;
     height: 22rem;
     background-color: var(--brand-black);
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    margin-left: 1rem;
-    margin-top: 3rem;
+    margin-left: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.rescard2 {
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    display: flex;
-    justify-content: center;
-    margin-left: 23rem;
-    margin-top: -22rem;
-}
-.rescard3{
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 45rem;
-    margin-top: -22rem;
-}
-.rescard4{
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    display: flex;
-    justify-content: center;
-    margin-left: 67rem;
-    margin-top: -22rem;
-}
-.rescard5 {
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    display: flex;
-    justify-content: center;
-    margin-left: 1rem;
-    margin-top: 5rem;
-}
-.rescard6 {
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 23rem;
-    margin-top: -22rem;
-}
-.rescard7 {
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    display: flex;
-    justify-content: center;
-    margin-left: 45.20rem;
-    margin-top: -22rem;
-}
-.rescard8 {
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    display: flex;
-    justify-content: center;
-    margin-left: 67rem;
-    margin-top: -22rem;
-}
+
+
 
 /* https://markdalgleish.com/projects/stellar.js/ */
 
 /********************************************/
-
-
-
-.rescard1 {
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    justify-content: center;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.rescard22 {
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    justify-content: center;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.rescard33{
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    justify-content: center;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.rescard44{
-    width: 20rem;
-    height: 22rem;
-    background-color: var(--brand-black);
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
+/* Sports Styling */
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+  }
+ 
 
 /* Footer styling */
 .container {
@@ -435,6 +480,9 @@ a:active {
     font-size: 1rem;
 }
 
+#underline {
+    text-decoration: underline;
+}
 
 /********************************************/
 
@@ -474,6 +522,7 @@ a:active {
         opacity: 1;
         transition: all .5s ease;
         z-index: -1;
+        overflow-y: hidden;
     }
 
     .navbar_menu.active {
@@ -484,6 +533,7 @@ a:active {
         z-index: 99;
         height: 68vh;
         font-size: 1.6rem;
+        overflow-y: hidden;
     }
 
     .navbar_item {
@@ -549,7 +599,20 @@ a:active {
     .table2 {
         margin-top: 3rem;
     }
-   
+    .rescard{
+        margin-left: 5.5rem;
+        
+    }
+    .row2 {
+        display: flex;
+        flex-wrap: wrap;
+      
+    }
+    .scroll-container img{
+        width:450px;
+        height:250px;
+      margin-right: 5;
+    }
 }
 
 
@@ -561,5 +624,9 @@ a:active {
         font-size: 10px;
         overflow-x: hidden;
     }
-
+    .rescard{
+        margin-left: 3rem;
+        
+    }
+   
 }
