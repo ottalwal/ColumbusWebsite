@@ -48,7 +48,52 @@
         </div>
     </nav>
     <div class="main">
-        
+        <div class="bodyy">
+        <div class="img-slider">
+            <div class="slide active">
+              <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_600,q_75,w_1366/v1/clients/columbus/MicrosoftTeams_image_13_1__2f64200c-b65b-4650-8a07-90759833a68b.png" alt="">
+              <div class="info">
+                <h2>Slide 01</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="../res/buckeyes_ohio_state_stadium.jpg" alt="">
+              <div class="info">
+                <h2>Slide 02</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="../res/ohbb.jpg" alt="">
+              <div class="info">
+                <h2>Slide 03</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="https://lowerfieldcbus.com/wp-content/uploads/2023/08/7-3-21_Columbus-Crew-vs-New-England_153-2.jpg" alt="">
+              <div class="info">
+                <h2>Slide 04</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="https://lowerfieldcbus.com/wp-content/uploads/2023/08/7-3-21_Columbus-Crew-vs-New-England_153-2.jpg" alt="">
+              <div class="info">
+                <h2>Slide 05</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="navigation">
+              <div class="btn active"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+            </div>
+          </div>
+        </div>
 <div class="scroll-container">
     <div class="row2">
     <img src="../res/ohiostadium2.jpg" alt="Ohio Stadium" width="600" height="400">
@@ -67,9 +112,9 @@
             <div class="row">
                 <div class="footer-col">
                     <h4>About us</h4>
-                    <ul>                        
+                    <ul>
                         <li><a href="#"><span>90 West Broad Street
-                        Columbus, Ohio 43215</span></a></li>
+                                    Columbus, Ohio 43215</span></a></li>
                         <li><a href="#"><span>view on map</span></a></li>
                         <li><a href="#">phone: <span>(614) 645-3111</span></a></li>
                     </ul>
@@ -100,9 +145,63 @@
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
-   </footer>
+    </footer>
+
+    <script>
+        var slides = document.querySelectorAll('.slide');
+            var btns = document.querySelectorAll('.btn');
+            let currentSlide = 1;
+        
+            // Javascript for image slider manual navigation
+            var manualNav = function(manual){
+              slides.forEach((slide) => {
+                slide.classList.remove('active');
+        
+                btns.forEach((btn) => {
+                  btn.classList.remove('active');
+                });
+              });
+        
+              slides[manual].classList.add('active');
+              btns[manual].classList.add('active');
+            }
+        
+            btns.forEach((btn, i) => {
+              btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+              });
+            });
+        
+            // Javascript for image slider autoplay navigation
+            var repeat = function(activeClass){
+              let active = document.getElementsByClassName('active');
+              let i = 1;
+        
+              var repeater = () => {
+                setTimeout(function(){
+                  [...active].forEach((activeSlide) => {
+                    activeSlide.classList.remove('active');
+                  });
+        
+                slides[i].classList.add('active');
+                btns[i].classList.add('active');
+                i++;
+        
+                if(slides.length == i){
+                  i = 0;
+                }
+                if(i >= slides.length){
+                  return;
+                }
+                repeater();
+              }, 10000);
+              }
+              repeater();
+            }
+            repeat();
+    </script>
 </body>
 </html>
