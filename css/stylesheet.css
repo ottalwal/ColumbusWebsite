@@ -229,6 +229,12 @@ a:active {
     overflow: hidden;
 }
 
+.block-white h1 {
+    font-size: 40px;
+    margin-left: 10%;
+    padding-top: 30px;
+}
+
 .linee {
     position: absolute;
     width: 100%; 
@@ -278,12 +284,13 @@ a:active {
     background-color: var(--brand-black);
     justify-content: center;
     margin-right: 3%;
-    z-index: 2;
+    z-index: 0.5;
 }
 
 .activcard-1 img {
     width: 500px;
     height: 400px;
+    z-index: 0.5;
 }
 
 .activcard-2 {
@@ -295,12 +302,14 @@ a:active {
     padding: 0px;
     background-color: var(--brand-black);
     justify-content: center;
-    margin-left: 3%;
+    margin-left: 3%;    
+    z-index: 0.5;
 }
 
 .activcard-2 img {
     width: 511px;
     height: 558px;
+    z-index: 0.5;
 }
 
 .content span {
@@ -376,12 +385,20 @@ a:active {
 }
 .rescard:hover{
     transform: scale(1.2);
-    transition: .6s ease-in-out;
-    transition: 1. ease-out;
+    transition: 0.3s;
 }
 
-
-
+.cardImage {
+    height: 300px;
+    width: 300px;
+  }
+  .card-heading{
+    color: var(--brand-black);
+    margin-bottom:.5rem;
+  }
+  .card-body {
+    color:var(--brand-black);
+  }
 /* https://markdalgleish.com/projects/stellar.js/ */
 
 /********************************************/
@@ -419,7 +436,7 @@ div.scroll-container {
 
 .footer {
     background-color: #000000;
-    padding: 200px 0;
+    padding: 30px 0;
     border-top: 3px solid var(--brand-red);
 }
 
@@ -510,7 +527,7 @@ div.scroll-container {
     justify-content: center;  
     align-items: center;  
     background: #1D212B;
-    z-index: 1;
+    z-index: 0.5;
 }
 
 .img-slider{
@@ -519,19 +536,20 @@ div.scroll-container {
   height: 500px;
   margin: 10px;
   background: #1D212B;
-  z-index: 1;
+  z-index: 0.5;
   object-fit: cover;
+
 }
 
 .img-slider .slide{
-  z-index: 1;
-  position: absolute;
-  width: 800px;
-  height: 500px;
-  width: 100%;
-  clip-path: circle(0% at 0 50%);
-  max-width: 800px;
-  max-height: 500px;
+    z-index: 0.5;
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+    max-width: 800px;
+    max-height: 500px;
 }
 
 .img-slider .slide.active{
@@ -539,11 +557,11 @@ div.scroll-container {
   transition: 2s;
   transition-property: clip-path;
   max-height: 800px;
-  z-index: 1;
+  z-index: 0.5;
 }
 
 .img-slider .slide img{
-  z-index: 1;
+    z-index: 0.5;
   border-radius: 5px;
   width: 100%;
   height: 100%;
@@ -555,7 +573,7 @@ div.scroll-container {
   position: absolute;
   top: 0;
   padding: 15px 30px;
-  z-index: 1;
+  z-index: 0.5;
 }
 
 .img-slider .slide .info h2{
@@ -564,7 +582,7 @@ div.scroll-container {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 2px;
-  z-index: 1;
+  z-index: 0.5;
 }
 
 .img-slider .slide .info p{
@@ -574,11 +592,11 @@ div.scroll-container {
   width: 60%;
   padding: 10px;
   border-radius: 4px;
-  z-index: 1;
+  z-index: 0.5;
 }
 
 .img-slider .navigation{
-  z-index: 2;
+    z-index: 0.6;
   position: absolute;
   display: flex;
   bottom: 30px;
@@ -593,7 +611,7 @@ div.scroll-container {
   margin: 10px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 2;
+  z-index: 0.6;
 }
 
 .img-slider .navigation .btn.active{
@@ -793,6 +811,51 @@ div.scroll-container {
     #mobile_menu.is-active .bar:nth-child(2) {
         opacity: 0;
     }
+
+    .classmobil {
+        max-width: 90%;
+        max-height: 90%;
+        margin: auto;
+        box-shadow: 0 50px 63px -80px #000000;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 5px;
+    }
+
+    .content {
+        width: 82.5%;
+        margin-left: 9%;
+    }
+
+    .innerblock {
+        max-width: 100%;
+        max-height: 10px;
+        align-items: center;
+        display: grid;
+    }
+
+    .block-blue {
+        border-radius: 0px 20px 20px 20px;
+    }
+    
+    .activcard-1 {
+        background-color: transparent;
+        margin: 0px;
+    }
+
+    .block-blue .innerblock .activcard-2 {
+        background-color: transparent;
+        order: -1;
+        margin: 0px;
+    }
+
+    .block-white {
+        background-color: #003768;
+        border-radius: 0px 20px 20px 20px;
+        margin-bottom: 10rem;
+    }
+
+    .
 }
 
 @media screen and (max-width:750px) {
