@@ -85,16 +85,15 @@ function createBlockCard(date, title, text, img, link) {
     blockCardText.textContent = text;
 
     const blockCardButton = document.createElement('button');
-    blockCardButton.href = link;
     blockCardButton.textContent = 'Learn more';
+    blockCardButton.href = link;
 
     blockCardContent.appendChild(blockCardDate);
     blockCardContent.appendChild(blockCardTitle);
     blockCardContent.appendChild(blockCardText);
     blockCardContent.appendChild(blockCardButton)
 
-
-    
+    //Final appending to block
     blockCard.appendChild(line);
     blockCard.appendChild(innerBlockCard);
 
