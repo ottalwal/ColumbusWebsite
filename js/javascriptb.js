@@ -9,4 +9,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   };
 
   menu.addEventListener('click', mobileMenu);
+
+
+
 });
