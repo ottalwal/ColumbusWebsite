@@ -1,9 +1,12 @@
-// Cards/JSON 
+let xhr = new XMLHttpRequest();
+let xhr1 = new XMLHttpRequest();
+
 const cardContainer = document.getElementById('container');
 const row = document.getElementById('row')
 
+// Functions for creating cards
 
-function createCard(title, content) {
+function createCard(title, content, ) {
     const card = document.createElement('div');
     card.classList.add('rescard');
 
@@ -15,27 +18,12 @@ function createCard(title, content) {
 
     card.appendChild(cardTitle);
     card.appendChild(cardContent);
+    
 
     return card;
+
 }
 
-
-if (document.getElementById('container')) {
-    const card1 = createCard('Dynamic Cards 101', 'Learn how to spice up your web page with dynamic card rendering!');
-    const card2 = createCard('The Power of Flexibility', 'Discover the endless possibilities of dynamic content.');
-    const card3 = createCard('The Power of Flexibility', 'Discover the endless possibilities of dynamic content.');
-    const card4 = createCard('The Power of Flexibility', 'Discover the endless possibilities of dynamic content.');
-    const card5 = createCard('The Power of Flexibility', 'Discover the endless possibilities of dynamic content.');
-    const card6 = createCard('The Power of Flexibility', 'Discover the endless possibilities of dynamic content.');
-
-    row.appendChild(card1);
-    row.appendChild(card2);
-    row.appendChild(card3);
-    row.appendChild(card4);
-    row.appendChild(card5);
-    row.appendChild(card6);
-}
-else { }
 
 function createBlockCard(date, title, text, img, link) {
     //For creating the sections on the activities site
@@ -100,9 +88,71 @@ function createBlockCard(date, title, text, img, link) {
     return blockCard;
 }
 
-const blockCardContainer = document.getElementsByClassName('classmobil')[0];
 
-if (document.getElementsByClassName('classmobil')) {
-    blockCardContainer.appendChild(createBlockCard("May 14", "Haben's House", "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!", "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/a0/61/58/franklin-park-conservatory.jpg?w=500&h=400&s=1", "https://stackoverflow.com/questions/5629684/how-can-i-check-if-an-element-exists-in-the-visible-dom"));
+
+
+// JSON
+
+
+
+//when state of request changes
+xhr.onload = function(){
+    //if server response === 'ok', create some HTML
+    if(xhr.status === 200 ){
+        //create an object to get the data from the JSON file
+        let responseObject = JSON.parse(xhr.responseText)
+
+        console.log(responseObject)
+        const blockCardContainer = document.getElementsByClassName('classmobil')[0];
+        //for(let i = 0; i < responseObject.activities.length; i++){
+            blockCardContainer.appendChild(createBlockCard("May 14", "Haben's House", "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!", "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/a0/61/58/franklin-park-conservatory.jpg?w=500&h=400&s=1", "https://stackoverflow.com/questions/5629684/how-can-i-check-if-an-element-exists-in-the-visible-dom"))
+        //}
+        
+    }
+}
+
+xhr1.onload = function(){
+    //if server response === 'ok', create some HTML
+    if(xhr1.status === 200 ){
+        //create an object to get the data from the JSON file
+        let responseObject = JSON.parse(xhr1.responseText)
+
+        console.log(responseObject)
+
+        let newCard = '';
+
+        for(let i = 0; i < responseObject.card1.length; i++){
+            newCard += "<div class='rescard'>"
+            newCard += "<img src='"  + responseObject.card1[i].img + "'"
+            newCard += "alt ='" + responseObject.card1[i].img + "' />"
+            newCard += "<p>" + responseObject.card1[i].description + "</p>"
+            newCard += "<div>" + responseObject.card1[i].description + "</div>"
+    
+        }
+        newCard += "</div>"  
+        console.log(newCard);
+
+        document.getElementById('row').innerHTML = newCard;
+    }
+}
+
+if (document.getElementsByClassName('classmobil')[0]) {
+    xhr.open('GET', '../js/restaurants.json', true)
+    xhr.send(null)
+    //blockCardContainer.appendChild(createBlockCard("May 14", "Haben's House", "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!", "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/a0/61/58/franklin-park-conservatory.jpg?w=500&h=400&s=1", "https://stackoverflow.com/questions/5629684/how-can-i-check-if-an-element-exists-in-the-visible-dom"));
 }
 else {}
+
+if (document.getElementById('container')) {
+    const card1 = createCard('Dynamic Cards 101', 'Learn how to spice up your web page with dynamic card rendering!');
+
+    row.appendChild(card1);
+}
+
+if (document.getElementsByClassName('container')) {
+    xhr1.open('GET', '../js/restaurants.json', true)
+    xhr1.send(null)
+}
+
+
+
