@@ -1,21 +1,25 @@
 {
-    "card1": [
+    "activities": [
       {
         "date": "May 14",
         "title": "Haben's House",
-        "description": "Resturant1",
-        "": "May 1",
-        "img": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+        "content": "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!",
+        "img": "May 1",
+        "link": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
       },
       {
-        "description": "Resturant1",
-        "cost": "May 15",
-        "img": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+        "date": "May 14",
+        "title": "Haben's House2",
+        "content": "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!",
+        "img": "May 1",
+        "link": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
       },
       {
-        "description": "Resturant1",
-        "cost": "May 30",
-        "img": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+        "date": "May 14",
+        "title": "Haben's House",
+        "content": "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!",
+        "img": "May 1",
+        "link": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
       }
     ]
   }
