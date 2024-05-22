@@ -1,5 +1,7 @@
 let xhr = new XMLHttpRequest();
 let xhr1 = new XMLHttpRequest();
+let xhr2 = new XMLHttpRequest();
+let xhr3 = new XMLHttpRequest();
 
 const cardContainer = document.getElementById('container');
 const row = document.getElementById('row')
@@ -25,11 +27,10 @@ function createCard(title, content, ) {
 }
 
 
-function createBlockCard(date, title, text, img, link, index) {
+function createBlockCard(date, title, text, linkwb, link, index) {
     //For creating the sections on the activities site index;
     const blockCard = document.createElement('div');
 
-    console.log(index)
     //If odd number, block-white. Else, block-blue
     if(index == 1){
         blockCard.classList.add('block-white');
@@ -58,7 +59,7 @@ function createBlockCard(date, title, text, img, link, index) {
         //Inside activcard
         const blockCardImg = document.createElement('img');
         blockCardImg.classList.add('blockimg-1')
-        blockCardImg.src = img;
+        blockCardImg.src = link;
 
         blockCardActivcard.appendChild(blockCardImg);
 
@@ -116,7 +117,7 @@ function createBlockCard(date, title, text, img, link, index) {
         //Inside activcard
         const blockCardImg = document.createElement('img');
         blockCardImg.classList.add('blockimg-2')
-        blockCardImg.src = img;
+        blockCardImg.src = link;
 
         blockCardActivcard.appendChild(blockCardImg);
 
@@ -165,16 +166,14 @@ xhr.onload = function(){
     if(xhr.status === 200 ){
         //create an object to get the data from the JSON file
         let responseObject = JSON.parse(xhr.responseText)
-        console.log(responseObject)
+
         const blockCardContainer = document.getElementsByClassName('classmobil')[0];
         for(let i = 0; i < responseObject.activities.length; i++){
             //Checks if index is odd or even
             let ires = i % 2;
-            console.log(ires)
             //Output depends on ires
-            blockCardContainer.appendChild(createBlockCard(responseObject.activities[i].date, responseObject.activities[i].title, responseObject.activities[i].content, responseObject.activities[i].img, responseObject.activities[i].link, ires))
+            blockCardContainer.appendChild(createBlockCard(responseObject.activities[i].date, responseObject.activities[i].title, responseObject.activities[i].content, responseObject.activities[i].linkwb, responseObject.activities[i].link, ires))
         }
-        
     }
 }
 
@@ -183,43 +182,47 @@ xhr1.onload = function(){
     if(xhr1.status === 200 ){
         //create an object to get the data from the JSON file
         let responseObject = JSON.parse(xhr1.responseText)
-
-        console.log(responseObject)
-
         let newCard = '';
 
-        for(let i = 0; i < responseObject.card1.length; i++){
+        for(let i = 0; i < responseObject.rescard.length; i++){
             newCard += "<div class='rescard'>"
-            newCard += "<img src='"  + responseObject.card1[i].img + "'"
-            newCard += "alt ='" + responseObject.card1[i].img + "' />"
-            newCard += "<p>" + responseObject.card1[i].description + "</p>"
-            newCard += "<div>" + responseObject.card1[i].description + "</div>"
-    
+            newCard += "<img src='"  + responseObject.rescard[i].img + "'"
+            newCard += "alt ='" + responseObject.rescard[i].img + "' />"
+            newCard += "<p>" + responseObject.rescard[i].description + "</p>"
+            newCard += "<div>" + responseObject.rescard[i].cost + "</div>"
+            newCard += "<div>" + responseObject.rescard[i].location + "</div>"
+            newCard += "<a href='" + responseObject.rescard[i].link + "'>"
+            newCard += "<button>" + "RSVP" + "</button>"
+            newCard += "<a> </div>" 
+            document.getElementById('row').innerHTML = newCard;
         }
-        newCard += "</div>"  
-        console.log(newCard);
-
-        document.getElementById('row').innerHTML = newCard;
     }
 }
 
 if (document.getElementsByClassName('classmobil')[0]) {
-    xhr.open('GET', '../js/activities.json', true)
+    xhr.open('GET', './js/activities.json', true)
     xhr.send(null)
     //blockCardContainer.appendChild(createBlockCard("May 14", "Haben's House", "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!", "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/a0/61/58/franklin-park-conservatory.jpg?w=500&h=400&s=1", "https://stackoverflow.com/questions/5629684/how-can-i-check-if-an-element-exists-in-the-visible-dom"));
 }
 else {}
 
 if (document.getElementById('container')) {
-    const card1 = createCard('Dynamic Cards 101', 'Learn how to spice up your web page with dynamic card rendering!');
+    const rescard = createCard('Dynamic Cards 101', 'Learn how to spice up your web page with dynamic card rendering!');
 
-    row.appendChild(card1);
+    row.appendChild(rescard);
 }
 
 if (document.getElementsByClassName('container')) {
-    xhr1.open('GET', '../js/restaurants.json', true)
+    xhr1.open('GET', './js/restaurants.json', true)
     xhr1.send(null)
 }
+if (document.getElementsByClassName('container')) {
+    xhr2.open('GET', './js/events.json', true)
+    xhr2.send(null)
+}
 
-
+if (document.getElementsByClassName('container')) {
+    xhr3.open('GET', './js/sports.json', true)
+    xhr3.send(null)
+}
 

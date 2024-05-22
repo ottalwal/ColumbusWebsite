@@ -386,9 +386,8 @@ a:active {
 }
 
 .rescard img{
-    width: fit-content;
-    max-width: 100%;
-    max-height: 60%;
+    width: 20rem;
+    height: 14rem;
 }
 
 .rescard:hover{
@@ -507,7 +506,7 @@ div.scroll-container {
 }
 
 .footer-col .social-links a:hover {
-    color: #24262b;
+    color: var(--brand-red);
     background-color: #ffffff;
 }
 
@@ -780,8 +779,12 @@ div.scroll-container {
     .block-white {
         background-color: #003768;
         border-radius: 0px 20px 20px 20px;
-        margin-bottom: 10rem;
+        margin: 5rem 0 5rem 0;
         height: 50rem;
+    }
+
+    .content span, .content .title {
+        color: var(--brand-red);
     }
 
     .linee {
