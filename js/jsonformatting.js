@@ -154,8 +154,6 @@ function createBlockCard(date, title, text, linkwb, link, index) {
 }
 
 
-
-
 // JSON
 
 
@@ -192,13 +190,58 @@ xhr1.onload = function(){
             newCard += "<div>" + responseObject.rescard[i].cost + "</div>"
             newCard += "<div>" + responseObject.rescard[i].location + "</div>"
             newCard += "<a href='" + responseObject.rescard[i].link + "'>"
-            newCard += "<button>" + "RSVP" + "</button>"
+            newCard += "<button> RSVP </button>"
             newCard += "<a> </div>" 
             document.getElementById('row').innerHTML = newCard;
         }
     }
 }
 
+xhr2.onload = function(){
+    //if server response === 'ok', create some HTML
+    if(xhr2.status === 200 ){
+        //create an object to get the data from the JSON file
+        let responseObject = JSON.parse(xhr2.responseText)
+        let newCard = '';
+
+        for(let i = 0; i < responseObject.rescard.length; i++){
+            newCard += "<div class='rescard'>"
+            newCard += "<img src='"  + responseObject.rescard[i].img + "'"
+            newCard += "alt ='" + responseObject.rescard[i].img + "' />"
+            newCard += "<p>" + responseObject.rescard[i].description + "</p>"
+            newCard += "<div>" + responseObject.rescard[i].cost + "</div>"
+            newCard += "<div>" + responseObject.rescard[i].location + "</div>"
+            newCard += "<a href='" + responseObject.rescard[i].link + "'>"
+            newCard += "<button> RSVP </button>"
+            newCard += "<a> </div>" 
+            document.getElementById('row').innerHTML = newCard;
+        }
+    }
+}
+
+xhr3.onload = function(){
+    //if server response === 'ok', create some HTML
+    if(xhr3.status === 200 ){
+        //create an object to get the data from the JSON file
+        let responseObject = JSON.parse(xhr3.responseText)
+        let newCard = '';
+
+        for(let i = 0; i < responseObject.rescard.length; i++){
+            newCard += "<div class='rescard'>"
+            newCard += "<img src='"  + responseObject.rescard[i].img + "'"
+            newCard += "alt ='" + responseObject.rescard[i].img + "' />"
+            newCard += "<p>" + responseObject.rescard[i].description + "</p>"
+            newCard += "<div>" + responseObject.rescard[i].cost + "</div>"
+            newCard += "<div>" + responseObject.rescard[i].location + "</div>"
+            newCard += "<a href='" + responseObject.rescard[i].link + "'>"
+            newCard += "<button> RSVP </button>"
+            newCard += "<a> </div>" 
+            document.getElementById('row').innerHTML = newCard;
+        }
+    }
+}
+
+// getElementsByClassName gets an array, using [0] pulls the first item in the array
 if (document.getElementsByClassName('classmobil')[0]) {
     xhr.open('GET', './js/activities.json', true)
     xhr.send(null)
@@ -206,23 +249,20 @@ if (document.getElementsByClassName('classmobil')[0]) {
 }
 else {}
 
-if (document.getElementById('container')) {
-    const rescard = createCard('Dynamic Cards 101', 'Learn how to spice up your web page with dynamic card rendering!');
-
-    row.appendChild(rescard);
-}
-
-if (document.getElementsByClassName('container')) {
+if (document.getElementsByClassName('tital')[0].textContent == "Restaurants") {
     xhr1.open('GET', './js/restaurants.json', true)
     xhr1.send(null)
 }
-if (document.getElementsByClassName('container')) {
+else {}
+
+if (document.getElementsByClassName('tital')[0].textContent == "Events") {
     xhr2.open('GET', './js/events.json', true)
     xhr2.send(null)
 }
+else {}
 
-if (document.getElementsByClassName('container')) {
+if (document.getElementsByClassName('tital')[0].textContent == "Sports") {
     xhr3.open('GET', './js/sports.json', true)
     xhr3.send(null)
 }
-
+else {}

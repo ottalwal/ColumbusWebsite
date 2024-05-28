@@ -19,7 +19,7 @@
       {
         "description": "The Guild House",
         "cost": "$50-100",
-        "location": "Address:624 N High St, Columbus, OH 43215",
+        "location": "Address: 624 N High St, Columbus, OH 43215",
         "link":"https://theguildhousecolumbus.com/",
         "img": "https://theguildhousecolumbus.com/wp-content/uploads/2019/07/rotator-01.jpg",
         "alt": "resturant image"
@@ -43,7 +43,7 @@
       {
         "description": "Lindey's",
         "cost": "$50-100",
-        "location": "Address:169 E Beck St, Columbus, OH 43206",
+        "location": "Address: 169 E Beck St, Columbus, OH 43206",
         "link":"https://www.lindeys.com/",
         "img": "https://images.otstatic.com/prod1/30251814/4/large.jpg",
         "alt": "resturant image"
@@ -51,7 +51,7 @@
       {
         "description": "Sycamore",
         "cost": "$30-50",
-        "location": "Address:262 E Sycamore St, Columbus, OH 43206",
+        "location": "Address: 262 E Sycamore St, Columbus, OH 43206",
         "link":"https://www.sycamoregv.com/",
         "img": "https://cdn.columbusunderground.com/wp-content/uploads/2021/07/TheSycamore-11.jpg",
         "alt": "resturant image"
@@ -67,7 +67,7 @@
       {
         "description": "Brassica at Easton Town Center",
         "cost": "$10-20",
-        "location": "Address:4012 Townsfair Way, Columbus, OH 43219",
+        "location": "Address: 4012 Townsfair Way, Columbus, OH 43219",
         "link":"https://www.brassicas.com/",
         "img": "https://images.squarespace-cdn.com/content/v1/61e9d3e147417304a171b77c/1642714103965-YIG9NCSMBH3WB9D8PUSQ/BX_Location_Banner_3.jpg",
         "alt": "resturant image"

@@ -1,25 +1,46 @@
 {
     "activities": [
       {
-        "date": "May 14",
-        "title": "Haben's House",
-        "content": "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!",
-        "linkwb": "https://www.nike.com/",
-        "link": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+        "date": "10 AM-5 PM",
+        "title": "Franklin Park Botanical Gardens",
+        "content": "Franklin Park Conservatory and Botanical Gardens offers world-class horticulture, art and nature-based exhibitions and educational programs for all ages.",
+        "linkwb": "https://www.fpconservatory.org/",
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/a0/61/58/franklin-park-conservatory.jpg?w=1200&h=-1&s=1"
       },
       {
-        "date": "May 14",
-        "title": "Haben's House2",
-        "content": "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!",
-        "linkwb": "https://www.nike.com/",
-        "link": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+        "date": "9 AM-6 PM",
+        "title": "Columbus Zoo & Aquarium",
+        "content": "As seen on National Geographic’s “Secrets of the Zoo,” the Columbus Zoo and Aquarium  is home to more than 10,000 animals representing 600 species from around the globe.",
+        "linkwb": "https://www.columbuszoo.org/",
+        "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/e1/f7/d3/visit-wildlights-at-the.jpg?w=1200&h=-1&s=1"
       },
       {
-        "date": "May 14",
-        "title": "Haben's House",
-        "content": "Lorem ipsum dolor sit amet, consecteur adipiscing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!",
-        "linkwb": "https://www.nike.com/",
-        "link": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+        "date": "10 AM-5 PM",
+        "title": "COSI",
+        "content": "COSI has combined science learning and fun since 1964 with 300+ hands-on exhibits, Ohio’s largest planetarium, Giant Screen Theater, live shows, and more.",
+        "linkwb": "https://cosi.org/",
+        "link": "https://whatshouldwedotodaycolumbus.com/wp-content/uploads/2022/05/science-museum-in-columbus-ohio-2-773x1030.jpeg.webp"
+      },
+      {
+        "date": "10 AM-6 PM",
+        "title": "LEGOLAND Discovery Center",
+        "content": "The Discover Center features 36,000 square feet dedicated to interactive games, play areas, building challenges, rides and a 4D movie theater—all about those famous plastic building bricks!",
+        "linkwb": "https://www.legolanddiscoverycenter.com/columbus/",
+        "link": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/columbus/48783798366_08a90a277a_k_2132e102-b5a5-47a3-9c01-4c60e89063d4.jpg"
+      },
+      {
+        "date": "10 AM-5 PM",
+        "title": "Columbus Museum of Art",
+        "content": "The Columbus Museum of Art's (CMA) collection spans work from Columbus-born artists like Aminah Brenda Lynn Robinson, George Bellows, and Elijah Pierce to the luminaries of 19th and 20th-century art.",
+        "linkwb": "https://www.columbusmuseum.org/",
+        "link": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/dublinoh/CMA-Walter-Wing-Dusk_186DF0E1-5056-A36A-0733337CB072F75D-186df0265056a36_186df13a-5056-a36a-07ba68cd418ce735.jpg"
+      },
+      {
+        "date": "June 15",
+        "title": "National Veterans Memorial",
+        "content": "This memorial museum opened in October 2018 and is the only place in America dedicated to telling the stories of veterans of all branches of military service over the course of all conflicts.",
+        "linkwb": "https://nationalvmm.org/",
+        "link": "https://media.architecturaldigest.com/photos/5bcde5b954bd2b5be7ac7630/16:9/w_2991,h_1682,c_limit/DJI_0109--Credit%20Aerial%20Image%20Solutions.jpg"
       }
     ]
   }

@@ -210,7 +210,68 @@ a:active {
 .main_btn:hover {
     background: linear-gradient( 50deg, var(--brand-red) 0%, #0d0d23);;
 }
-
+.main_btn2{
+    box-shadow: 2px 2px 10px -1px #000;
+    align-items: center;
+    width: 200px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    padding: 17px 45px;
+    background: var(--brand-red);
+    outline: none;
+    top: 17%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border: none;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #041f3d;
+    background: linear-gradient( 8deg, #0d5cb2 0%, #000000 74%);
+    text-align: center;
+}
+.main_btn3{
+    box-shadow: 2px 2px 10px -1px #000;
+    align-items: center;
+    width: 350px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    padding: 17px 45px;
+    background: var(--brand-red);
+    outline: none;
+    top: 17%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border: none;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #041f3d;
+    background: linear-gradient( 8deg, #0d5cb2 0%, #000000 74%);
+    text-align: center;
+}
+.main_btnContainer{
+    margin-left: 36.5rem;
+    margin-top:1rem;
+}
+.main_btnContainer2{
+    margin-left: 31.7rem;
+    margin-top:1rem;
+}
 /********************************************/
 
 /* Template Styling */
@@ -281,7 +342,7 @@ a:active {
     width: 950px;
     height: 450px;
     padding: 0px 0px;
-    background-color: var(--brand-black);
+    background-color: transparent;
     justify-content: center;
     margin-right: 3%;
     z-index: 0.5;
@@ -298,18 +359,18 @@ a:active {
     overflow: hidden;
     display: flex;
     width: 950px;
-    height: 450px;
+    height: 100%;
+    max-height: 450px;
     padding: 0px;
-    background-color: var(--brand-black);
+    background-color: transparent;
     justify-content: center;
     margin-left: 3%;    
     z-index: 0.5;
 }
 
 .activcard-2 img {
-    width: 511px;
-    height: 558px;
-    z-index: 0.5;
+    height: 100%;
+    max-height: 100%;
 }
 
 .content span {
@@ -383,7 +444,6 @@ a:active {
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 20px 20px 0px 20px;
-    
 }
 
 .rescard img{
@@ -405,9 +465,16 @@ a:active {
     border-radius: 15px;
     width: 5rem;
     margin-left: 7rem;
-    margin-top: 1rem;
+    margin-top: .2rem;
 }
-
+.headline2{
+    font-size: 3rem;
+    margin-left:32.5rem;
+}
+.headline h1{
+    font-size: 5rem;
+    margin-left:27rem;
+}
 /* https://markdalgleish.com/projects/stellar.js/ */
 
 /********************************************/
@@ -816,8 +883,9 @@ div.scroll-container {
         color: var(--brand-red);
     }
     
-    .text {
+    .content .text {
         justify-content: center;
+        color: #fff;
     }
 }
 @media (max-width: 820px){
@@ -907,6 +975,22 @@ div.scroll-container {
     flex-wrap: wrap;
     margin-left: 1rem;
   }
+  .headline h1{
+    font-size: 2rem;
+    margin-left:9rem;
+}
+.headline2{
+    font-size: 1rem;
+    margin-left:11rem;
+}
+.main_btnContainer{
+    margin-left: 9rem;
+    margin-top:1rem;
+}
+.main_btnContainer2{
+    margin-left: 4.5rem;
+    margin-top:1rem;
+}
 }
 
 @media (max-width: 620px){
