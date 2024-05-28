@@ -929,6 +929,11 @@ div.scroll-container {
     margin-top: -25px;
     justify-content: center;
   }
+  .main_btn3{
+    width:20rem;
+    height:3rem;
+    font-size: 10px;
+    margin-right:100rem;
 }
 
 @media screen and (max-width:750px) {
@@ -990,6 +995,23 @@ div.scroll-container {
 .main_btnContainer2{
     margin-left: 4.5rem;
     margin-top:1rem;
+}
+.main_btn3{
+    width:11rem;
+    height:3rem;
+    font-size: 8px;
+    margin-left:5rem;
+}
+.main_btn3{
+    width:11rem;
+    height:3rem;
+    font-size: 8px;
+    margin-left:5rem;
+}.main_btn2{
+    width:8rem;
+    height:3rem;
+    font-size: 8px;
+    margin-left: 2rem;
 }
 }
 
